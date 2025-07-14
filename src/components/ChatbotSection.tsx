@@ -7,14 +7,14 @@ const ChatbotSection = () => {
 
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-groove-blue/10 via-groove-pink/5 to-groove-violet/10"></div>
+      {/* Organic background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-groove-light-pink/25 via-groove-white to-groove-violet/20"></div>
       
-      {/* Floating elements */}
+      {/* Large organic floating shapes */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-16 h-16 bg-groove-pink/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-32 right-32 w-24 h-24 bg-groove-violet/15 rounded-full blur-2xl animate-bounce delay-1000"></div>
-        <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-groove-light-pink/30 rounded-full animate-ping delay-500"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-groove-pink/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-32 right-32 w-64 h-64 bg-groove-violet/20 rounded-full blur-2xl animate-bounce delay-1000"></div>
+        <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-groove-light-pink/25 rounded-full blur-xl animate-ping delay-500"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -23,13 +23,13 @@ const ChatbotSection = () => {
           <div className="mb-12">
             <div className="inline-flex items-center gap-3 mb-6 p-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-groove-pink/20">
               <Bot className="w-8 h-8 text-groove-pink" />
-              <span className="font-groove text-xl font-bold text-groove-blue tracking-wide">
+              <span className="font-rubik text-xl font-extrabold text-groove-blue tracking-wide">
                 IA PERSONNALISÉE
               </span>
               <Sparkles className="w-6 h-6 text-groove-violet" />
             </div>
             
-            <h2 className="font-groove text-3xl md:text-5xl font-black text-groove-blue mb-6 tracking-wide">
+            <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-groove-blue mb-6 tracking-wide">
               PARLE À NOTRE IA !
             </h2>
             <p className="font-rubik text-lg md:text-xl text-groove-blue/80 max-w-2xl mx-auto leading-relaxed">

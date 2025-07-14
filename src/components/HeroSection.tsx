@@ -10,7 +10,14 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
+      </div>
+
+      {/* Organic Shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-groove-pink/20 to-groove-violet/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-groove-light-pink/30 to-groove-pink/20 rounded-full blur-2xl animate-bounce"></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-groove-violet/15 rounded-full blur-xl animate-pulse delay-1000"></div>
       </div>
 
       {/* Floating Shapes */}
@@ -24,20 +31,20 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         {/* Logo/Brand */}
         <div className="mb-8">
-          <div className="inline-block p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-            <h1 className="font-groove text-4xl md:text-6xl font-black text-white tracking-wider">
+          <div className="inline-block p-8 bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-2xl">
+            <h1 className="font-rubik text-4xl md:text-6xl font-black text-white tracking-wider">
               GROOVE
-              <span className="block text-groove-light-pink">NOMAD</span>
+              <span className="block text-white">NOMAD</span>
             </h1>
           </div>
         </div>
 
         {/* Main Slogan */}
         <div className="mb-12">
-          <h2 className="font-groove text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-            <span className="text-groove-light-pink">Ton son.</span>{" "}
-            <span className="text-groove-violet">Ton trip.</span>{" "}
-            <span className="text-groove-pink">Ton groove.</span>
+          <h2 className="font-rubik text-2xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+            <span className="text-groove-pink">Ton son.</span>{" "}
+            <span className="text-groove-blue">Ton trip.</span>{" "}
+            <span className="text-groove-light-pink">Ton groove.</span>
           </h2>
           <p className="font-rubik text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Crée ton voyage autour d'un festival avec l'IA. 

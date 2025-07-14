@@ -27,8 +27,12 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Glitch/Festival Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-groove-blue/5 via-groove-pink/5 to-groove-violet/10"></div>
+      {/* Festival Background with organic shapes */}
+      <div className="absolute inset-0 bg-gradient-to-br from-groove-light-pink/20 via-groove-white to-groove-blue/15"></div>
+      
+      {/* Large organic background shapes */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-groove-violet/10 to-groove-pink/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-groove-light-pink/15 to-groove-blue/10 rounded-full blur-2xl animate-bounce"></div>
       
       {/* Sparkle effect */}
       <div className="absolute inset-0 pointer-events-none">
@@ -40,7 +44,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-groove text-3xl md:text-5xl font-black text-groove-blue mb-6 tracking-wide">
+          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-groove-blue mb-6 tracking-wide">
             ILS ONT VÉCU LEUR GROOVE
           </h2>
           <p className="font-rubik text-lg md:text-xl text-groove-blue/80 max-w-2xl mx-auto">
@@ -55,8 +59,8 @@ const TestimonialsSection = () => {
               key={index}
               className="relative group"
             >
-              {/* Card with glitter effect */}
-              <div className="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 border border-groove-light-pink/30 overflow-hidden">
+              {/* Card with soft shadow */}
+              <div className="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-lg shadow-groove-violet/10 hover:shadow-2xl hover:shadow-groove-blue/20 transition-all duration-500 group-hover:scale-105 border border-groove-light-pink/30 overflow-hidden">
                 {/* Glitter overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-groove-pink/5 via-transparent to-groove-violet/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
@@ -95,11 +99,18 @@ const TestimonialsSection = () => {
                     </div>
                   </div>
                   
-                  {/* Festival badge */}
-                  <div className="inline-block mt-3 px-3 py-1 bg-gradient-to-r from-groove-light-pink to-groove-violet/30 rounded-full">
-                    <span className="font-rubik text-xs font-medium text-groove-blue">
-                      🎵 {testimonial.festival}
-                    </span>
+                  {/* Festival badge with colored dots */}
+                  <div className="flex items-center gap-2 mt-3">
+                    <div className={`w-3 h-3 rounded-full ${
+                      index === 0 ? 'bg-groove-blue' : 
+                      index === 1 ? 'bg-groove-pink' : 
+                      'bg-groove-violet'
+                    }`}></div>
+                    <div className="inline-block px-3 py-1 bg-gradient-to-r from-groove-light-pink/30 to-groove-violet/20 rounded-full">
+                      <span className="font-rubik text-xs font-medium text-groove-blue">
+                        🎵 {testimonial.festival}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -114,7 +125,7 @@ const TestimonialsSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="inline-block p-8 bg-gradient-to-r from-groove-pink/10 via-groove-violet/10 to-groove-blue/10 rounded-3xl backdrop-blur-sm border border-groove-pink/20">
-            <h3 className="font-groove text-2xl font-bold text-groove-blue mb-2 tracking-wide">
+            <h3 className="font-rubik text-2xl font-extrabold text-groove-blue mb-2 tracking-wide">
               TON AVIS NOUS INTÉRESSE !
             </h3>
             <p className="font-rubik text-groove-blue/80 mb-4">

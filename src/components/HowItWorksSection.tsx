@@ -25,16 +25,17 @@ const HowItWorksSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background with organic shapes */}
-      <div className="absolute inset-0 bg-gradient-to-br from-groove-white via-groove-light-pink/20 to-groove-violet/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-groove-light-pink/30 via-groove-white to-groove-violet/20"></div>
       
-      {/* Floating decoration */}
-      <div className="absolute top-10 right-10 w-40 h-40 bg-gradient-to-br from-groove-pink/10 to-groove-violet/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-32 h-32 bg-gradient-to-br from-groove-light-pink/20 to-groove-pink/10 rounded-full blur-2xl"></div>
+      {/* Floating decoration - larger organic shapes */}
+      <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-groove-pink/15 to-groove-violet/15 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-groove-light-pink/25 to-groove-pink/15 rounded-full blur-2xl animate-bounce"></div>
+      <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-br from-groove-violet/20 to-groove-blue/10 rounded-full blur-xl animate-pulse delay-500"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-groove text-3xl md:text-5xl font-black text-groove-blue mb-6 tracking-wide">
+          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-groove-blue mb-6 tracking-wide">
             COMMENT ÇA MARCHE ?
           </h2>
           <p className="font-rubik text-lg md:text-xl text-groove-blue/80 max-w-2xl mx-auto">
@@ -52,19 +53,19 @@ const HowItWorksSection = () => {
               )}
               
               {/* Step Card */}
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-500 group-hover:scale-105 border border-groove-light-pink/30">
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl hover:shadow-groove-violet/20 transition-all duration-500 group-hover:scale-105 border border-groove-light-pink/30 hover:border-groove-violet/40">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-groove-pink to-groove-violet rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
 
                 {/* Icon */}
-                <div className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <step.icon className="w-10 h-10 text-white" />
+                <div className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-groove-violet/30 transition-all duration-300`}>
+                  <step.icon className="w-12 h-12 text-white" />
                 </div>
 
                 {/* Content */}
-                <h3 className="font-groove text-xl md:text-2xl font-bold text-groove-blue mb-4 tracking-wide">
+                <h3 className="font-rubik text-xl md:text-2xl font-extrabold text-groove-blue mb-4 tracking-wide">
                   {step.title}
                 </h3>
                 <p className="font-rubik text-groove-blue/80 leading-relaxed">

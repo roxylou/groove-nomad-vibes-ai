@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h3 className="font-groove text-3xl font-black text-white tracking-wider mb-2">
+              <h3 className="font-rubik text-3xl font-extrabold text-white tracking-wider mb-2">
                 GROOVE<span className="text-groove-light-pink">NOMAD</span>
               </h3>
               <p className="font-rubik text-white/80 max-w-md leading-relaxed">
