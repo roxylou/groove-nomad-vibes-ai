@@ -18,12 +18,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'rubik': ['Rubik', 'sans-serif'],
+				'groove': ['Rubik', 'sans-serif'], // We'll use Rubik with custom styling for headers
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// GrooveNomad brand colors
+				'groove-pink': 'hsl(var(--groove-pink))',
+				'groove-blue': 'hsl(var(--groove-blue))',
+				'groove-light-pink': 'hsl(var(--groove-light-pink))',
+				'groove-violet': 'hsl(var(--groove-violet))',
+				'groove-white': 'hsl(var(--groove-white))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

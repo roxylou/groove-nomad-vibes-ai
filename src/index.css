@@ -2,41 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* GrooveNomad Design System - Festival Vibes
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Base colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* GrooveNomad Brand Colors */
+    --groove-pink: 333 89% 48%;        /* #DC1F73 - Rose fluo */
+    --groove-blue: 226 83% 34%;        /* #162B96 - Bleu profond */
+    --groove-light-pink: 310 100% 87%; /* #FFBCEE - Rose clair */
+    --groove-violet: 214 56% 66%;      /* #7DA7D5 - Violet pastel */
+    --groove-white: 0 0% 100%;         /* #FFFFFF - Blanc pur */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Design System Mapping */
+    --primary: var(--groove-pink);
+    --primary-foreground: var(--groove-white);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --secondary: var(--groove-light-pink);
+    --secondary-foreground: var(--groove-blue);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--groove-violet);
+    --accent-foreground: var(--groove-white);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 310 50% 95%;
+    --muted-foreground: 226 40% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --card: var(--groove-white);
+    --card-foreground: var(--groove-blue);
+
+    --popover: var(--groove-white);
+    --popover-foreground: var(--groove-blue);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--groove-white);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 310 30% 90%;
+    --input: 310 30% 95%;
+    --ring: var(--groove-pink);
 
-    --radius: 0.5rem;
+    /* Festival Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--groove-pink)), hsl(var(--groove-blue)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--groove-light-pink)), hsl(var(--groove-violet)));
+    --gradient-button: linear-gradient(90deg, hsl(var(--groove-pink)), hsl(var(--groove-violet)));
+    --gradient-background: linear-gradient(180deg, hsl(var(--groove-white)), hsl(var(--groove-light-pink) / 0.3));
+
+    /* Festival Effects */
+    --shadow-glow: 0 0 30px hsl(var(--groove-pink) / 0.3);
+    --shadow-festival: 0 10px 40px hsl(var(--groove-violet) / 0.2);
+    --transition-groove: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,28 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rubik;
+  }
+}
+
+/* Custom festival animations and effects */
+@layer utilities {
+  .text-groove-gradient {
+    background: linear-gradient(135deg, hsl(var(--groove-pink)), hsl(var(--groove-violet)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .bg-groove-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-groove {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-groove {
+    transition: var(--transition-groove);
   }
 }
