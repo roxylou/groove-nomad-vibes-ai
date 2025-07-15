@@ -130,7 +130,7 @@ All colors MUST be HSL.
 
   body {
     @apply font-rubik text-white;
-    background: linear-gradient(to bottom, #FFBCEE 0%, #DC1F73 50%, #7DA7D5 100%);
+    background: transparent;
     min-height: 100vh;
   }
 }
