@@ -38,11 +38,11 @@ const HeroSection = () => {
 
         {/* Main Slogan */}
         <div className="mb-12">
-          <h2 className="font-rubik text-2xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
-            <span className="text-groove-pink">Ton son.</span>{" "}
-            <span className="text-groove-blue">Ton trip.</span>{" "}
-            <span className="text-groove-light-pink">Ton groove.</span>
-          </h2>
+          <img 
+            src="/lovable-uploads/64b343b3-72b3-421f-a42f-56780c3ed1c2.png" 
+            alt="Ton son. Ton trip. Ton groove." 
+            className="mx-auto max-w-full h-auto mb-4"
+          />
           <p className="font-rubik text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Crée ton voyage autour d'un festival avec l'IA. 
             Personnalisé, devis instantané, réservation fluide.
