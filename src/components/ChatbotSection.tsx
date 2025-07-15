@@ -6,22 +6,21 @@ const ChatbotSection = () => {
   const [showChat, setShowChat] = useState(false);
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Organic background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-groove-light-pink/25 via-groove-white to-groove-violet/20"></div>
-      
-      {/* Large organic floating shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-groove-pink/15 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-32 right-32 w-64 h-64 bg-groove-violet/20 rounded-full blur-2xl animate-bounce delay-1000"></div>
-        <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-groove-light-pink/25 rounded-full blur-xl animate-ping delay-500"></div>
+    <section className="py-20 relative overflow-hidden glass-section">
+      {/* Modern blurred background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Top Right Circle */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Bottom Left Circle */}
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center gap-3 mb-6 p-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-groove-pink/20">
+            <div className="inline-flex items-center gap-3 mb-6 p-4 glass-card">
               <Bot className="w-8 h-8 text-groove-pink" />
               <span className="font-rubik text-xl font-extrabold text-groove-blue tracking-wide">
                 IA PERSONNALISÉE
@@ -41,7 +40,7 @@ const ChatbotSection = () => {
           <div className="mb-8">
             {!showChat ? (
               // Preview State
-              <div className="bg-white/90 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl border border-groove-light-pink/30 max-w-2xl mx-auto">
+              <div className="glass-card p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
                 <div className="space-y-6">
                   {/* Mock conversation */}
                   <div className="text-left space-y-4">
@@ -96,7 +95,7 @@ const ChatbotSection = () => {
               </div>
             ) : (
               // Actual Chatbot Iframe Placeholder
-              <div className="bg-white/90 backdrop-blur-md rounded-3xl p-4 shadow-2xl border border-groove-light-pink/30 max-w-2xl mx-auto h-96">
+              <div className="glass-card p-4 shadow-2xl max-w-2xl mx-auto h-96">
                 <div className="w-full h-full bg-gradient-to-br from-groove-light-pink/20 to-groove-violet/20 rounded-2xl flex items-center justify-center">
                   <div className="text-center">
                     <Bot className="w-16 h-16 text-groove-pink mx-auto mb-4" />

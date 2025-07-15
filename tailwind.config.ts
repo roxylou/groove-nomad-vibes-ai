@@ -36,6 +36,10 @@ export default {
 				'groove-violet': 'hsl(var(--groove-violet))',
 				'groove-white': 'hsl(var(--groove-white))',
 				
+				// Modern section colors
+				'section-bg': 'hsl(var(--section-background))',
+				'neon-circle': 'hsl(var(--neon-circle))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'

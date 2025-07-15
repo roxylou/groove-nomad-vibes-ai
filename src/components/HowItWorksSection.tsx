@@ -23,14 +23,15 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background with organic shapes */}
-      <div className="absolute inset-0 bg-gradient-to-br from-groove-light-pink/30 via-groove-white to-groove-violet/20"></div>
-      
-      {/* Floating decoration - larger organic shapes */}
-      <div className="absolute top-10 right-10 w-80 h-80 bg-gradient-to-br from-groove-pink/15 to-groove-violet/15 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 left-10 w-64 h-64 bg-gradient-to-br from-groove-light-pink/25 to-groove-pink/15 rounded-full blur-2xl animate-bounce"></div>
-      <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-gradient-to-br from-groove-violet/20 to-groove-blue/10 rounded-full blur-xl animate-pulse delay-500"></div>
+    <section className="py-20 relative overflow-hidden glass-section">
+      {/* Modern blurred background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Top Right Circle */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Bottom Left Circle */}
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -53,7 +54,7 @@ const HowItWorksSection = () => {
               )}
               
               {/* Step Card */}
-              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl hover:shadow-groove-violet/20 transition-all duration-500 group-hover:scale-105 border border-groove-light-pink/30 hover:border-groove-violet/40">
+              <div className="relative glass-card p-8 text-center shadow-lg hover:shadow-2xl hover:shadow-groove-violet/20 transition-all duration-500 group-hover:scale-105">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-groove-pink to-groove-violet rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
@@ -82,7 +83,7 @@ const HowItWorksSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-block p-6 bg-gradient-to-r from-groove-pink/10 to-groove-violet/10 rounded-2xl backdrop-blur-sm border border-groove-pink/20">
+          <div className="inline-block p-6 glass-card">
             <p className="font-rubik text-groove-blue font-semibold text-lg mb-2">
               Prêt à commencer ton aventure ?
             </p>

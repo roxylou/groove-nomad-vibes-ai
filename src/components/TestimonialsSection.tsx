@@ -26,19 +26,14 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Festival Background with organic shapes */}
-      <div className="absolute inset-0 bg-gradient-to-br from-groove-light-pink/20 via-groove-white to-groove-blue/15"></div>
-      
-      {/* Large organic background shapes */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-groove-violet/10 to-groove-pink/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-groove-light-pink/15 to-groove-blue/10 rounded-full blur-2xl animate-bounce"></div>
-      
-      {/* Sparkle effect */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-groove-pink rounded-full animate-ping"></div>
-        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-groove-violet rounded-full animate-pulse delay-500"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-3 h-3 bg-groove-light-pink/50 rounded-full animate-bounce delay-1000"></div>
+    <section className="py-20 relative overflow-hidden glass-section">
+      {/* Modern blurred background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Top Right Circle */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Bottom Left Circle */}
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -60,7 +55,7 @@ const TestimonialsSection = () => {
               className="relative group"
             >
               {/* Card with soft shadow */}
-              <div className="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-lg shadow-groove-violet/10 hover:shadow-2xl hover:shadow-groove-blue/20 transition-all duration-500 group-hover:scale-105 border border-groove-light-pink/30 overflow-hidden">
+              <div className="relative glass-card p-8 shadow-lg shadow-groove-violet/10 hover:shadow-2xl hover:shadow-groove-blue/20 transition-all duration-500 group-hover:scale-105 overflow-hidden">
                 {/* Glitter overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-groove-pink/5 via-transparent to-groove-violet/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
@@ -124,7 +119,7 @@ const TestimonialsSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-block p-8 bg-gradient-to-r from-groove-pink/10 via-groove-violet/10 to-groove-blue/10 rounded-3xl backdrop-blur-sm border border-groove-pink/20">
+          <div className="inline-block p-8 glass-card">
             <h3 className="font-rubik text-2xl font-extrabold text-groove-blue mb-2 tracking-wide">
               TON AVIS NOUS INTÉRESSE !
             </h3>

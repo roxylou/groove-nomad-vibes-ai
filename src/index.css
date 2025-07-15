@@ -18,6 +18,10 @@ All colors MUST be HSL.
     --groove-light-pink: 310 100% 87%; /* #FFBCEE - Rose clair */
     --groove-violet: 214 56% 66%;      /* #7DA7D5 - Violet pastel */
     --groove-white: 0 0% 100%;         /* #FFFFFF - Blanc pur */
+    
+    /* New Modern Background Colors */
+    --section-background: 216 60% 62%; /* #8999c7 - bleu-violet doux */
+    --neon-circle: 333 68% 49%;        /* #c23c7a - rose flou néon */
 
     /* Design System Mapping */
     --primary: var(--groove-pink);
@@ -55,6 +59,11 @@ All colors MUST be HSL.
     --shadow-glow: 0 0 30px hsl(var(--groove-pink) / 0.3);
     --shadow-festival: 0 10px 40px hsl(var(--groove-violet) / 0.2);
     --transition-groove: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Glassmorphism Effects */
+    --glass-background: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-blur: blur(20px);
 
     --radius: 1rem;
 
@@ -143,5 +152,26 @@ All colors MUST be HSL.
   
   .transition-groove {
     transition: var(--transition-groove);
+  }
+  
+  /* Modern Glassmorphism Styles */
+  .glass-section {
+    background-color: hsl(var(--section-background));
+    background-image:
+      radial-gradient(circle at 80% 20%, hsla(var(--neon-circle), 0.4) 0%, transparent 60%),
+      radial-gradient(circle at 20% 80%, hsla(var(--neon-circle), 0.4) 0%, transparent 60%);
+  }
+  
+  .glass-card {
+    background: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    border-radius: 20px;
+  }
+  
+  .glass-button {
+    background: hsl(var(--groove-light-pink));
+    border-radius: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
