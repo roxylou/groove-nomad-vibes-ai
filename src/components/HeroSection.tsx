@@ -13,9 +13,10 @@ const HeroSection = () => {
 
   // Calculer les transformations basées sur le scroll
   const logoScale = Math.max(0.3, 1 - scrollY / 800);
-  const logoX = Math.min(scrollY / 2, 300);
+  const logoX = -Math.min(scrollY / 2, 300); // Négatif pour aller vers la gauche
   const logoY = Math.min(scrollY / 3, 200);
   const contentOpacity = Math.min(scrollY / 400, 1);
+  const logoOpacity = scrollY > 1200 ? Math.max(0, 1 - (scrollY - 1200) / 300) : 1; // Disparaît après 1200px de scroll
 
   return (
     <div className="relative">
@@ -45,7 +46,8 @@ const HeroSection = () => {
           className="fixed top-1/2 left-1/2 z-50 transition-all duration-300 ease-out"
           style={{
             transform: `translate(-50%, -50%) translate(${logoX}px, -${logoY}px) scale(${logoScale})`,
-            transformOrigin: 'center center'
+            transformOrigin: 'center center',
+            opacity: logoOpacity
           }}
         >
           <img 
