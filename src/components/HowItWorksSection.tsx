@@ -2,7 +2,8 @@ import { Brain, MapPin, CreditCard } from "lucide-react";
 
 const steps = [
   {
-    icon: Brain,
+    icon: "custom",
+    image: "/lovable-uploads/ec20c808-cfdb-4a19-9379-e8cb77a44449.png",
     title: "Tu choisis ta vibe",
     description: "Dis-nous quel genre de musique te fait vibrer, ton budget et tes dates préférées.",
     color: "from-groove-pink to-groove-violet"
@@ -53,8 +54,12 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Icon */}
-                <div className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-groove-violet/30 transition-all duration-300`}>
-                  <step.icon className="w-12 h-12 text-white" />
+                <div className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-groove-violet/30 transition-all duration-300 overflow-hidden`}>
+                  {step.icon === "custom" ? (
+                    <img src={step.image} alt={step.title} className="w-16 h-16 object-contain" />
+                  ) : (
+                    <step.icon className="w-12 h-12 text-white" />
+                  )}
                 </div>
 
                 {/* Content */}
