@@ -17,22 +17,6 @@ const HeroSection = () => {
   const logoY = Math.min(scrollY / 3, 200);
   const contentOpacity = Math.min(scrollY / 400, 1);
   const logoOpacity = scrollY > 1200 ? Math.max(0, 1 - (scrollY - 1200) / 300) : 1; // Disparaît après 1200px de scroll
-  
-  // Position finale fixe du logo en haut à gauche
-  const isLogoFixed = scrollY > 400; // Le logo devient fixe après 400px de scroll
-  const fixedLogoStyle = isLogoFixed ? {
-    position: 'fixed' as const,
-    top: '2rem',
-    left: '2rem',
-    transform: 'scale(0.3)',
-    transformOrigin: 'top left',
-    opacity: logoOpacity,
-    zIndex: 50
-  } : {
-    transform: `translate(-50%, -50%) translate(${logoX}px, -${logoY}px) scale(${logoScale})`,
-    transformOrigin: 'center center',
-    opacity: logoOpacity
-  };
 
   return (
     <div className="relative">
@@ -58,8 +42,12 @@ const HeroSection = () => {
 
         {/* Logo Groove Nomad avec animation */}
         <div 
-          className={`${isLogoFixed ? 'fixed' : 'fixed top-1/2 left-1/2'} z-50 transition-all duration-300 ease-out`}
-          style={fixedLogoStyle}
+          className="fixed top-1/2 left-1/2 z-50 transition-all duration-300 ease-out"
+          style={{
+            transform: `translate(-50%, -50%) translate(${logoX}px, -${logoY}px) scale(${logoScale})`,
+            transformOrigin: 'center center',
+            opacity: logoOpacity
+          }}
         >
           <img 
             src="/lovable-uploads/9bc7e05f-20ce-469d-bf51-875605907f4c.png" 
