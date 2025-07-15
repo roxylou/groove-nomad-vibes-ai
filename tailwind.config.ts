@@ -20,7 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'rubik': ['Rubik', 'sans-serif'],
-				'groove': ['Rubik', 'sans-serif'], // We'll use Rubik with custom styling for headers
+				'groove': ['Fredoka', 'Rubik', 'sans-serif'], // Fredoka for retro/festive headers
 			},
 			colors: {
 				border: 'hsl(var(--border))',
