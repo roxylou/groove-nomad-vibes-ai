@@ -26,7 +26,7 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         {/* Logo/Brand */}
         <div className="mb-8">
-          <img src="/lovable-uploads/54b4fb0f-fad5-4063-bedf-97624ee4afa6.png" alt="Groove Nomad" className="h-24 md:h-32 lg:h-40 w-auto" />
+          
         </div>
 
         {/* Main Slogan */}
