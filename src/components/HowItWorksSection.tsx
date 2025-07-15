@@ -26,7 +26,7 @@ const steps = [
 const HowItWorksSection = () => {
   return (
     <section className="py-20 relative overflow-hidden">
-
+      {/* Pas de fond - utilise le dégradé global du body */}
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">

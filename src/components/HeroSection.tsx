@@ -22,8 +22,7 @@ const HeroSection = () => {
     <div className="relative">
       {/* Section d'accueil avec logo */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e8a9cb] to-[#f1b6d2]"></div>
+        {/* Pas de fond - utilise le dégradé global du body */}
 
         {/* Blurred Circular Shapes */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -67,8 +66,7 @@ const HeroSection = () => {
 
       {/* Section du contenu principal */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Gradient - continuation */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e8a9cb] to-[#f1b6d2]"></div>
+        {/* Pas de fond - utilise le dégradé global du body */}
 
         {/* Blurred Circular Shapes - continuation */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -90,12 +88,12 @@ const HeroSection = () => {
         >
           {/* Texte principal */}
           <div className="mb-12">
-            <p className="font-rubik text-3xl md:text-5xl font-extrabold text-[#DC1F73] max-w-2xl mx-auto tracking-wide leading-tight mb-4">
+            <p className="font-rubik text-3xl md:text-5xl font-extrabold text-white max-w-2xl mx-auto tracking-wide leading-tight mb-4">
               CRÉE TON VOYAGE<br />
               AUTOUR D'UN FESTIVAL<br />
               AVEC L'IA.
             </p>
-            <p className="font-rubik text-lg md:text-2xl text-[#DC1F73] font-semibold max-w-3xl mx-auto">
+            <p className="font-rubik text-lg md:text-2xl text-white/90 font-semibold max-w-3xl mx-auto">
               Personnalisé, devis instantané, réservation fluide.
             </p>
           </div>
@@ -116,15 +114,15 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-groove-pink font-rubik">500+</div>
+              <div className="text-2xl md:text-3xl font-bold text-white font-rubik">500+</div>
               <div className="text-white/80 font-rubik">Festivals partenaires</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-groove-violet font-rubik">24h</div>
+              <div className="text-2xl md:text-3xl font-bold text-white font-rubik">24h</div>
               <div className="text-white/80 font-rubik">Délai de réponse IA</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-groove-light-pink font-rubik">98%</div>
+              <div className="text-2xl md:text-3xl font-bold text-white font-rubik">98%</div>
               <div className="text-white/80 font-rubik">Satisfaction client</div>
             </div>
           </div>
