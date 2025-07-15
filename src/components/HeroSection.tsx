@@ -16,7 +16,7 @@ const HeroSection = () => {
   const logoX = -Math.min(scrollY / 2, 300); // Négatif pour aller vers la gauche
   const logoY = Math.min(scrollY / 3, 200);
   const contentOpacity = Math.min(scrollY / 400, 1);
-  const logoOpacity = scrollY > 1200 ? Math.max(0, 1 - (scrollY - 1200) / 300) : 1; // Disparaît après 1200px de scroll
+  const logoOpacity = scrollY > 800 ? Math.max(0, 1 - (scrollY - 800) / 200) : 1; // Disparaît au début de la deuxième section
 
   return (
     <div className="relative">
