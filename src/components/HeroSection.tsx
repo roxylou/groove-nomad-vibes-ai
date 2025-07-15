@@ -5,19 +5,16 @@ import heroImage from "@/assets/hero-festival.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(/lovable-uploads/35cd1451-7641-43c7-9583-b35707b9f2ac.png)` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50"></div>
-      </div>
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#e8a9cb] to-[#f1b6d2]"></div>
 
-      {/* Organic Shapes */}
+      {/* Blurred Circular Shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-groove-pink/20 to-groove-violet/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-groove-light-pink/30 to-groove-pink/20 rounded-full blur-2xl animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-groove-violet/15 rounded-full blur-xl animate-pulse delay-1000"></div>
+        {/* Top Right Circle - Pink/Rose Dark */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-[#d63384]/60 via-[#e91e63]/40 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Bottom Left Circle - Mirrored */}
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-[#d63384]/60 via-[#e91e63]/40 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       {/* Floating Shapes */}
