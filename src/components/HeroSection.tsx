@@ -29,10 +29,11 @@ const HeroSection = () => {
         {/* Logo/Brand */}
         <div className="mb-8">
           <div className="inline-block p-8 bg-white/10 backdrop-blur-lg rounded-3xl border border-white/30 shadow-2xl">
-            <h1 className="font-groove text-4xl md:text-6xl font-black text-white tracking-wider">
-              GROOVE
-              <span className="block text-white">NOMAD</span>
-            </h1>
+            <img 
+              src="/lovable-uploads/54b4fb0f-fad5-4063-bedf-97624ee4afa6.png" 
+              alt="Groove Nomad" 
+              className="h-16 md:h-20 w-auto"
+            />
           </div>
         </div>
 
