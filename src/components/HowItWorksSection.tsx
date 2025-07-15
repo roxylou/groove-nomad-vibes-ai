@@ -9,7 +9,8 @@ const steps = [
     color: "from-groove-pink to-groove-violet"
   },
   {
-    icon: MapPin,
+    icon: "custom",
+    image: "/lovable-uploads/dabf1291-1584-48d6-a2cb-027ab6d48e3a.png",
     title: "L'IA te génère un séjour complet",
     description: "Notre IA crée ton voyage personnalisé : festival, hébergement, transport et activités.",
     color: "from-groove-violet to-groove-blue"
