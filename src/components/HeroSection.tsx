@@ -31,7 +31,7 @@ const HeroSection = () => {
           <img 
             src="/lovable-uploads/54b4fb0f-fad5-4063-bedf-97624ee4afa6.png" 
             alt="Groove Nomad" 
-            className="h-96 md:h-[32rem] lg:h-[40rem] w-auto"
+            className="h-24 md:h-32 lg:h-40 w-auto"
           />
         </div>
 
