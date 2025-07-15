@@ -1,25 +1,23 @@
-import { Brain, MapPin, CreditCard } from "lucide-react";
+import { Brain, MapPin } from "lucide-react";
 
 const steps = [
   {
     icon: "custom",
     image: "/lovable-uploads/5cac453b-5167-428e-9ece-1d783717e179.png",
     title: "Tu choisis ta vibe",
-    description: "Dis-nous quel genre de musique te fait vibrer, ton budget et tes dates préférées.",
-    color: "from-groove-pink to-groove-violet"
+    description: "Dis-nous quel genre de musique te fait vibrer, ton budget et tes dates préférées."
   },
   {
     icon: "custom",
     image: "/lovable-uploads/dabf1291-1584-48d6-a2cb-027ab6d48e3a.png",
     title: "L'IA te génère un séjour complet",
-    description: "Notre IA crée ton voyage personnalisé : festival, hébergement, transport et activités.",
-    color: "from-groove-violet to-groove-blue"
+    description: "Notre IA crée ton voyage personnalisé : festival, hébergement, transport et activités."
   },
   {
-    icon: CreditCard,
+    icon: "custom",
+    image: "/lovable-uploads/23dc5da3-b980-4cb5-8e7b-3e4df254fc09.png",
     title: "Tu reçois ton devis & tu réserves",
-    description: "Devis instantané transparent, paiement sécurisé en 3 clics. Ton groove t'attend !",
-    color: "from-groove-blue to-groove-pink"
+    description: "Devis instantané transparent, paiement sécurisé en 3 clics. Ton groove t'attend !"
   }
 ];
 
@@ -56,13 +54,7 @@ const HowItWorksSection = () => {
 
                 {/* Icon */}
                 <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                  {step.icon === "custom" ? (
-                    <img src={step.image} alt={step.title} className="w-20 h-20 object-contain" />
-                  ) : (
-                    <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center group-hover:shadow-lg group-hover:shadow-groove-violet/30`}>
-                      <step.icon className="w-12 h-12 text-white" />
-                    </div>
-                  )}
+                  <img src={step.image} alt={step.title} className="w-20 h-20 object-contain" />
                 </div>
 
                 {/* Content */}
