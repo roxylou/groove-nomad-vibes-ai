@@ -129,7 +129,9 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-rubik;
+    @apply font-rubik text-white;
+    background: linear-gradient(180deg, #7cc0f8 0%, #c5a7e4 50%, #e33c82 100%);
+    min-height: 100vh;
   }
 }
 

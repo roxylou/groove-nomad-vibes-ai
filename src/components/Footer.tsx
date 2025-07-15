@@ -4,15 +4,6 @@ import { Facebook, Instagram, Twitter, Youtube, Mail, MapPin, Phone } from "luci
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-groove-blue via-groove-pink to-groove-violet"></div>
-      
-      {/* Decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/5 rounded-full blur-lg transform -translate-x-1/2 -translate-y-1/2"></div>
-      </div>
 
       <div className="relative z-10 container mx-auto px-6 py-16">
         {/* Main Footer Content */}

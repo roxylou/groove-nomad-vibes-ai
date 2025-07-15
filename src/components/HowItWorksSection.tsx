@@ -23,23 +23,15 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden glass-section">
-      {/* Modern blurred background shapes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Top Right Circle */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
-        
-        {/* Bottom Left Circle */}
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-20 relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-groove-blue mb-6 tracking-wide">
+          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-wide">
             COMMENT ÇA MARCHE ?
           </h2>
-          <p className="font-rubik text-lg md:text-xl text-groove-blue/80 max-w-2xl mx-auto">
+          <p className="font-rubik text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
             Trois étapes simples pour créer le voyage festival de tes rêves
           </p>
         </div>
@@ -66,10 +58,10 @@ const HowItWorksSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="font-rubik text-xl md:text-2xl font-extrabold text-groove-blue mb-4 tracking-wide">
+                <h3 className="font-rubik text-xl md:text-2xl font-extrabold text-white mb-4 tracking-wide">
                   {step.title}
                 </h3>
-                <p className="font-rubik text-groove-blue/80 leading-relaxed">
+                <p className="font-rubik text-white/80 leading-relaxed">
                   {step.description}
                 </p>
 
@@ -84,10 +76,10 @@ const HowItWorksSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="inline-block p-6 glass-card">
-            <p className="font-rubik text-groove-blue font-semibold text-lg mb-2">
+            <p className="font-rubik text-white font-semibold text-lg mb-2">
               Prêt à commencer ton aventure ?
             </p>
-            <p className="font-rubik text-groove-blue/70">
+            <p className="font-rubik text-white/70">
               L'IA attend tes goûts musicaux pour créer ton voyage parfait
             </p>
           </div>

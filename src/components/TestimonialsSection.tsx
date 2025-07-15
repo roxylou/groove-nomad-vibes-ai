@@ -26,23 +26,15 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden glass-section">
-      {/* Modern blurred background shapes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Top Right Circle */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
-        
-        {/* Bottom Left Circle */}
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-20 relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-groove-blue mb-6 tracking-wide">
+          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-wide">
             ILS ONT VÉCU LEUR GROOVE
           </h2>
-          <p className="font-rubik text-lg md:text-xl text-groove-blue/80 max-w-2xl mx-auto">
+          <p className="font-rubik text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
             Découvre les témoignages de notre communauté de festivaliers
           </p>
         </div>
@@ -72,7 +64,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Testimonial text */}
-                <p className="font-rubik text-groove-blue mb-6 leading-relaxed relative z-10">
+                <p className="font-rubik text-white mb-6 leading-relaxed relative z-10">
                   "{testimonial.text}"
                 </p>
 
@@ -85,10 +77,10 @@ const TestimonialsSection = () => {
                       </span>
                     </div>
                     <div>
-                      <div className="font-rubik font-semibold text-groove-blue">
+                      <div className="font-rubik font-semibold text-white">
                         {testimonial.name}
                       </div>
-                      <div className="font-rubik text-sm text-groove-blue/70">
+                      <div className="font-rubik text-sm text-white/70">
                         {testimonial.location}
                       </div>
                     </div>
@@ -102,7 +94,7 @@ const TestimonialsSection = () => {
                       'bg-groove-violet'
                     }`}></div>
                     <div className="inline-block px-3 py-1 bg-gradient-to-r from-groove-light-pink/30 to-groove-violet/20 rounded-full">
-                      <span className="font-rubik text-xs font-medium text-groove-blue">
+                      <span className="font-rubik text-xs font-medium text-white">
                         🎵 {testimonial.festival}
                       </span>
                     </div>
@@ -120,10 +112,10 @@ const TestimonialsSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="inline-block p-8 glass-card">
-            <h3 className="font-rubik text-2xl font-extrabold text-groove-blue mb-2 tracking-wide">
+            <h3 className="font-rubik text-2xl font-extrabold text-white mb-2 tracking-wide">
               TON AVIS NOUS INTÉRESSE !
             </h3>
-            <p className="font-rubik text-groove-blue/80 mb-4">
+            <p className="font-rubik text-white/80 mb-4">
               Rejoins notre communauté et partage tes expériences festival
             </p>
             <div className="flex items-center justify-center gap-2 text-groove-pink">

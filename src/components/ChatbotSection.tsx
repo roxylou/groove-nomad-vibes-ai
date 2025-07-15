@@ -6,15 +6,7 @@ const ChatbotSection = () => {
   const [showChat, setShowChat] = useState(false);
 
   return (
-    <section className="py-20 relative overflow-hidden glass-section">
-      {/* Modern blurred background shapes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Top Right Circle */}
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
-        
-        {/* Bottom Left Circle */}
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-neon-circle/40 via-neon-circle/20 to-transparent rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-20 relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -22,16 +14,16 @@ const ChatbotSection = () => {
           <div className="mb-12">
             <div className="inline-flex items-center gap-3 mb-6 p-4 glass-card">
               <Bot className="w-8 h-8 text-groove-pink" />
-              <span className="font-rubik text-xl font-extrabold text-groove-blue tracking-wide">
+              <span className="font-rubik text-xl font-extrabold text-white tracking-wide">
                 IA PERSONNALISÉE
               </span>
               <Sparkles className="w-6 h-6 text-groove-violet" />
             </div>
             
-            <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-groove-blue mb-6 tracking-wide">
+            <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-wide">
               PARLE À NOTRE IA !
             </h2>
-            <p className="font-rubik text-lg md:text-xl text-groove-blue/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-rubik text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
               Notre assistant IA comprend tes goûts musicaux et crée ton voyage festival parfait en temps réel
             </p>
           </div>
@@ -49,7 +41,7 @@ const ChatbotSection = () => {
                         <Bot className="w-4 h-4 text-white" />
                       </div>
                       <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4 max-w-xs">
-                        <p className="font-rubik text-groove-blue text-sm">
+                        <p className="font-rubik text-white text-sm">
                           Salut ! Quel genre de musique te fait vibrer ? 🎵
                         </p>
                       </div>
@@ -71,7 +63,7 @@ const ChatbotSection = () => {
                         <Bot className="w-4 h-4 text-white" />
                       </div>
                       <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4 max-w-xs">
-                        <p className="font-rubik text-groove-blue text-sm">
+                        <p className="font-rubik text-white text-sm">
                           Parfait ! Je pense à Tomorrowland ou Ultra... Quel budget ? 💰
                         </p>
                       </div>
@@ -99,10 +91,10 @@ const ChatbotSection = () => {
                 <div className="w-full h-full bg-gradient-to-br from-groove-light-pink/20 to-groove-violet/20 rounded-2xl flex items-center justify-center">
                   <div className="text-center">
                     <Bot className="w-16 h-16 text-groove-pink mx-auto mb-4" />
-                    <p className="font-rubik text-groove-blue">
+                    <p className="font-rubik text-white">
                       Intégration chatbot IA ici
                     </p>
-                    <p className="font-rubik text-groove-blue/70 text-sm mt-2">
+                    <p className="font-rubik text-white/70 text-sm mt-2">
                       (iframe ou widget chat)
                     </p>
                   </div>
@@ -138,22 +130,22 @@ const ChatbotSection = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-white font-bold text-lg">🎯</span>
               </div>
-              <h4 className="font-rubik font-semibold text-groove-blue mb-2">Recommandations précises</h4>
-              <p className="font-rubik text-groove-blue/70 text-sm">L'IA analyse tes goûts musicaux</p>
+              <h4 className="font-rubik font-semibold text-white mb-2">Recommandations précises</h4>
+              <p className="font-rubik text-white/70 text-sm">L'IA analyse tes goûts musicaux</p>
             </div>
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-gradient-to-br from-groove-violet to-groove-blue rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-white font-bold text-lg">⚡</span>
               </div>
-              <h4 className="font-rubik font-semibold text-groove-blue mb-2">Réponses instantanées</h4>
-              <p className="font-rubik text-groove-blue/70 text-sm">Devis et options en temps réel</p>
+              <h4 className="font-rubik font-semibold text-white mb-2">Réponses instantanées</h4>
+              <p className="font-rubik text-white/70 text-sm">Devis et options en temps réel</p>
             </div>
             <div className="text-center p-4">
               <div className="w-12 h-12 bg-gradient-to-br from-groove-blue to-groove-pink rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="text-white font-bold text-lg">🔥</span>
               </div>
-              <h4 className="font-rubik font-semibold text-groove-blue mb-2">Conseils exclusifs</h4>
-              <p className="font-rubik text-groove-blue/70 text-sm">Tips et bons plans cachés</p>
+              <h4 className="font-rubik font-semibold text-white mb-2">Conseils exclusifs</h4>
+              <p className="font-rubik text-white/70 text-sm">Tips et bons plans cachés</p>
             </div>
           </div>
         </div>
