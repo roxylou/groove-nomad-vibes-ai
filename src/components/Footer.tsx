@@ -14,7 +14,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/9ff62954-4b9d-4444-a19c-7d6825a419fd.png" 
                 alt="GrooveNomad Logo" 
-                className="h-10 w-auto mb-2"
+                className="h-20 w-auto mb-2"
               />
               <p className="font-rubik text-white/80 max-w-md leading-relaxed">
                 Crée ton voyage festival parfait avec l'IA. 
