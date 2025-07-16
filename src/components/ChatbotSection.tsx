@@ -123,8 +123,12 @@ const ChatbotSection = () => {
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
             <div className="text-center p-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold text-lg">🎯</span>
+              <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <img 
+                  src="/lovable-uploads/a57b665d-f50e-47e5-bba3-a6536b06b1a9.png" 
+                  alt="Icon" 
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h4 className="font-rubik font-semibold text-white mb-2">Recommandations précises</h4>
               <p className="font-rubik text-white/70 text-sm">L'IA analyse tes goûts musicaux</p>
