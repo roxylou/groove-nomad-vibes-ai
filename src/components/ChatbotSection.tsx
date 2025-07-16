@@ -137,8 +137,12 @@ const ChatbotSection = () => {
               <p className="font-rubik text-white/70 text-sm">Devis et options en temps réel</p>
             </div>
             <div className="text-center p-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-groove-blue to-groove-pink rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold text-lg">🔥</span>
+              <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                <img 
+                  src="/lovable-uploads/fe60db83-1c2b-4ae8-8798-2ec766325797.png" 
+                  alt="Icon" 
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <h4 className="font-rubik font-semibold text-white mb-2">Conseils exclusifs</h4>
               <p className="font-rubik text-white/70 text-sm">Tips et bons plans cachés</p>
