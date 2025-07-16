@@ -86,19 +86,15 @@ const ChatbotSection = () => {
                 </div>
               </div>
             ) : (
-              // Actual Chatbot Iframe Placeholder
+              // Chatbot IA intégré
               <div className="glass-card p-4 shadow-2xl max-w-2xl mx-auto h-96">
-                <div className="w-full h-full bg-gradient-to-br from-groove-light-pink/20 to-groove-violet/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <Bot className="w-16 h-16 text-groove-pink mx-auto mb-4" />
-                    <p className="font-rubik text-white">
-                      Intégration chatbot IA ici
-                    </p>
-                    <p className="font-rubik text-white/70 text-sm mt-2">
-                      (iframe ou widget chat)
-                    </p>
-                  </div>
-                </div>
+                <iframe
+                  src="https://backtofest-v2.onrender.com"
+                  className="w-full h-full rounded-2xl border-0"
+                  title="Chatbot IA GrooveNomad"
+                  allow="microphone; camera; clipboard-read; clipboard-write"
+                  loading="lazy"
+                />
               </div>
             )}
           </div>
