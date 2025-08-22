@@ -14,7 +14,7 @@ const festivals = [
     dates: "19–28 juillet 2024",
     location: "Boom, Belgique",
     price: 89,
-    image: "/lovable-uploads/1a15cd75-717d-4bb6-bb7d-d61d4cd49c50.png"
+    image: "/lovable-uploads/fdad185a-0221-48ab-a835-839049e117b2.png"
   },
   {
     name: "Sónar Festival",
