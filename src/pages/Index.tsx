@@ -10,7 +10,7 @@ const Index = () => {
     <div 
       className="min-h-screen font-rubik"
       style={{
-        background: 'linear-gradient(to bottom, #FFBCEE 0%, #DC1F73 50%, #7DA7D5 100%)'
+        background: 'linear-gradient(to bottom, #e53975 0%, #729dc9 100%)'
       }}
     >
       <HeroSection />
