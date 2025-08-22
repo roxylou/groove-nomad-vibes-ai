@@ -88,12 +88,12 @@ const HeroSection = () => {
         >
           {/* Texte principal */}
           <div className="mb-12">
-            <p className="font-rubik text-3xl md:text-5xl font-extrabold text-white max-w-2xl mx-auto tracking-wide leading-tight mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
               CRÉE TON VOYAGE<br />
               AUTOUR D'UN FESTIVAL<br />
               AVEC L'IA.
-            </p>
-            <p className="font-rubik text-lg md:text-2xl text-white/90 font-semibold max-w-3xl mx-auto">
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto">
               Personnalisé, devis instantané, réservation fluide.
             </p>
           </div>
