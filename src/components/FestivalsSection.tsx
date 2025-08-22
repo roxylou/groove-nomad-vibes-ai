@@ -21,7 +21,7 @@ const festivals = [
     dates: "13–15 juin 2024", 
     location: "Barcelone, Espagne",
     price: 79,
-    image: "/lovable-uploads/23dc5da3-b980-4cb5-8e7b-3e4df254fc09.png"
+    image: "/lovable-uploads/69aed925-3a00-4266-bc56-43aad1cc58be.png"
   },
   {
     name: "Primavera Sound",
