@@ -100,12 +100,32 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button variant="groove" size="lg" className="text-lg px-8 py-4 font-rubik">
+            <Button 
+              variant="groove" 
+              size="lg" 
+              className="text-lg px-8 py-4 font-rubik"
+              onClick={() => {
+                const chatbotSection = document.getElementById('chatbot-section');
+                if (chatbotSection) {
+                  chatbotSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <Sparkles className="mr-2" />
               Crée ton voyage avec l'IA
               <ArrowRight className="ml-2" />
             </Button>
-            <Button variant="groove-outline" size="lg" className="text-lg px-8 py-4 font-rubik backdrop-blur-sm">
+            <Button 
+              variant="groove-outline" 
+              size="lg" 
+              className="text-lg px-8 py-4 font-rubik backdrop-blur-sm"
+              onClick={() => {
+                const festivalsSection = document.querySelector('[data-section="festivals"]');
+                if (festivalsSection) {
+                  festivalsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <Music className="mr-2" />
               Découvrir les festivals
             </Button>
