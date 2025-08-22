@@ -90,7 +90,7 @@ const FestivalsSection = () => {
   };
 
   return (
-    <section className="glass-section py-20" data-section="festivals">
+    <section className="py-20 relative" data-section="festivals">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
