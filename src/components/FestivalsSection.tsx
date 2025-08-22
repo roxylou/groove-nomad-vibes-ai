@@ -94,9 +94,12 @@ const FestivalsSection = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-6 font-groove">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
             Festivals phares 🎶
           </h2>
+          <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto">
+            Découvre une sélection exclusive des meilleurs festivals électro du monde entier
+          </p>
         </div>
 
         {/* Carousel */}
@@ -110,41 +113,42 @@ const FestivalsSection = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {festivals.map((festival, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="glass-card border-white/20 overflow-hidden group hover:scale-105 transition-all duration-300">
-                    <div className="relative h-48 overflow-hidden">
-                      <img 
-                        src={festival.image}
-                        alt={festival.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-3 font-groove">
-                        {festival.name}
-                      </h3>
-                      <div className="space-y-2 text-white/90">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">📅</span>
-                          <span className="text-sm">{festival.dates}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">📍</span>
-                          <span className="text-sm">{festival.location}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">💶</span>
-                          <span className="text-sm font-semibold">Prix à partir de {festival.price} €</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                   <Card className="glass-card border-white/20 overflow-hidden group hover:scale-105 transition-groove shadow-groove hover:shadow-xl">
+                     <div className="relative h-48 overflow-hidden">
+                       <img 
+                         src={festival.image}
+                         alt={`${festival.name} - Festival électronique`}
+                         className="w-full h-full object-cover group-hover:scale-110 transition-groove"
+                       />
+                       <div className="absolute inset-0 bg-gradient-to-t from-groove-blue/80 via-groove-blue/20 to-transparent" />
+                       <div className="absolute top-4 right-4">
+                         <div className="bg-groove-pink/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold font-rubik">
+                           À partir de {festival.price}€
+                         </div>
+                       </div>
+                     </div>
+                     <CardContent className="p-6 bg-gradient-to-br from-white/10 to-white/5">
+                       <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-groove tracking-wide">
+                         {festival.name}
+                       </h3>
+                       <div className="space-y-3 text-white/90 font-rubik">
+                         <div className="flex items-center gap-3">
+                           <span className="text-lg">📅</span>
+                           <span className="text-sm md:text-base font-medium">{festival.dates}</span>
+                         </div>
+                         <div className="flex items-center gap-3">
+                           <span className="text-lg">📍</span>
+                           <span className="text-sm md:text-base font-medium">{festival.location}</span>
+                         </div>
+                       </div>
+                     </CardContent>
+                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="glass-card border-white/20 text-white hover:bg-white/20" />
-            <CarouselNext className="glass-card border-white/20 text-white hover:bg-white/20" />
+            <CarouselPrevious className="glass-card border-white/30 text-white hover:bg-groove-pink/20 hover:border-groove-pink/50 transition-groove -left-4 md:-left-12" />
+            <CarouselNext className="glass-card border-white/30 text-white hover:bg-groove-pink/20 hover:border-groove-pink/50 transition-groove -right-4 md:-right-12" />
           </Carousel>
         </div>
 
@@ -154,10 +158,13 @@ const FestivalsSection = () => {
             onClick={scrollToChatbot}
             variant="groove"
             size="lg"
-            className="text-lg px-8 py-6 font-semibold"
+            className="text-lg px-8 py-6 font-bold font-rubik shadow-groove hover:shadow-xl"
           >
-            Demander un devis
+            Demander un devis personnalisé
           </Button>
+          <p className="text-white/80 mt-4 font-rubik text-sm">
+            Réponse en moins de 24h • Devis gratuit • Sans engagement
+          </p>
         </div>
       </div>
     </section>
