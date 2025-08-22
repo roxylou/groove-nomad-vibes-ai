@@ -1,84 +1,128 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sophie",
-    location: "Paris, France",
-    text: "Amazing experience! The AI found the perfect festival for my taste and the trip was seamless from start to finish.",
+    name: "Léa, 24 ans",
+    location: "Paris",
+    text: "GrooveNomad organized an amazing weekend at Tomorrowland for me! The AI had planned everything, even the secret afterparties 🔥",
     rating: 5,
-    festival: "Dekmantel Festival"
+    festival: "Tomorrowland Belgium"
   },
   {
-    name: "Marcus",
-    location: "Berlin, Germany", 
-    text: "I discovered festivals I never would have found on my own. The personalized recommendations were spot on!",
+    name: "Tom, 28 ans", 
+    location: "Lyon",
+    text: "First time traveling alone to a festival. The app found me perfect roommates and incredible accommodation!",
     rating: 5,
-    festival: "Sonar Festival"
+    festival: "Burning Man"
   },
   {
-    name: "Elena",
-    location: "Barcelona, Spain",
-    text: "The booking process was so smooth and the AI understood exactly what I was looking for. Will definitely use again!",
+    name: "Sarah, 22 ans",
+    location: "Marseille", 
+    text: "Student budget respected, incredible experience! The AI really knows our tastes as young festival-goers 💜",
     rating: 5,
-    festival: "Movement Festival"
+    festival: "Ultra Music Festival"
   }
 ];
 
 const TestimonialsSectionEn = () => {
   return (
     <section className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        {/* Blurred Circular Shapes */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/3 -right-32 w-96 h-96 bg-gradient-radial from-[#d63384]/30 via-[#e91e63]/15 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/3 -left-32 w-96 h-96 bg-gradient-radial from-[#729dc9]/30 via-[#4a90b8]/15 to-transparent rounded-full blur-3xl"></div>
-        </div>
 
-        {/* Floating Shapes */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/6 w-16 h-16 bg-groove-light-pink/20 rounded-full blur-md animate-pulse delay-200"></div>
-          <div className="absolute bottom-1/4 right-1/5 w-12 h-12 bg-groove-violet/25 rounded-full blur-lg animate-bounce delay-800"></div>
-        </div>
-
-        <div className="text-center mb-16 relative z-10">
-          <h2 className="section-title text-white mb-4">They found their groove</h2>
-          <p className="section-subtitle text-white/90 max-w-2xl mx-auto">
-            Discover how others lived their unforgettable festival journeys.
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
+            THEY FOUND THEIR GROOVE
+          </h2>
+          <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto">
+            Discover testimonials from our community of festival-goers
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12 relative z-10">
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div 
-              key={index} 
-              className="glass-card p-6 rounded-2xl group hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+              key={index}
+              className="relative group"
             >
-              <div className="mb-6">
-                <div className="flex items-center mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+              {/* Card with soft shadow */}
+              <div className="relative glass-card p-8 shadow-lg shadow-groove-violet/10 hover:shadow-2xl hover:shadow-groove-blue/20 transition-all duration-500 group-hover:scale-105 overflow-hidden">
+                {/* Glitter overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-groove-pink/5 via-transparent to-groove-violet/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Quote icon */}
+                <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center">
+                  <Quote className="w-4 h-4 text-white" />
+                </div>
+
+                {/* Rating stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-groove-pink fill-current" />
                   ))}
                 </div>
-                <p className="text-white/90 font-rubik italic leading-relaxed mb-4">
+
+                {/* Testimonial text */}
+                <p className="font-rubik text-white mb-6 leading-relaxed relative z-10">
                   "{testimonial.text}"
                 </p>
-              </div>
-              <div className="border-t border-white/10 pt-4">
-                <div className="font-bold text-white font-groove text-lg">{testimonial.name}</div>
-                <div className="text-white/70 font-rubik text-sm">{testimonial.location}</div>
-                <div className="text-groove-light-pink font-rubik text-sm mt-1">
-                  @ {testimonial.festival}
+
+                {/* User info */}
+                <div className="relative z-10">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold font-rubik text-sm">
+                        {testimonial.name.split(',')[0][0]}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="font-rubik font-semibold text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="font-rubik text-sm text-white/70">
+                        {testimonial.location}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Festival badge with colored dots */}
+                  <div className="flex items-center gap-2 mt-3">
+                    <div className={`w-3 h-3 rounded-full ${
+                      index === 0 ? 'bg-groove-blue' : 
+                      index === 1 ? 'bg-groove-pink' : 
+                      'bg-groove-violet'
+                    }`}></div>
+                    <div className="inline-block px-3 py-1 bg-gradient-to-r from-groove-light-pink/30 to-groove-violet/20 rounded-full">
+                      <span className="font-rubik text-xs font-medium text-white">
+                        🎵 {testimonial.festival}
+                      </span>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Decorative elements */}
+                <div className="absolute bottom-4 right-4 w-4 h-4 bg-groove-light-pink/20 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="absolute top-1/2 left-2 w-2 h-2 bg-groove-violet/30 rounded-full group-hover:animate-ping"></div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center relative z-10">
-          <div className="glass-card inline-block px-8 py-4 rounded-full">
-            <p className="text-white/90 font-rubik">
-              <span className="text-groove-light-pink font-bold">Join them!</span> Share your experience with us.
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="inline-block p-8 glass-card">
+            <h3 className="font-rubik text-2xl font-extrabold text-white mb-2 tracking-wide">
+              YOUR OPINION MATTERS TO US!
+            </h3>
+            <p className="font-rubik text-white/80 mb-4">
+              Join our community and share your festival experiences
             </p>
+            <div className="flex items-center justify-center gap-2 text-groove-pink">
+              <Star className="w-5 h-5 fill-current" />
+              <span className="font-rubik font-semibold">4.9/5 from 2000+ reviews</span>
+              <Star className="w-5 h-5 fill-current" />
+            </div>
           </div>
         </div>
       </div>
