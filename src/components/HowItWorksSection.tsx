@@ -1,4 +1,5 @@
-import { Brain, MapPin } from "lucide-react";
+import { Brain, MapPin, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const steps = [
   {
@@ -22,6 +23,12 @@ const steps = [
 ];
 
 const HowItWorksSection = () => {
+  const scrollToChatbot = () => {
+    const chatbotSection = document.getElementById('chatbot-section');
+    if (chatbotSection) {
+      chatbotSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Pas de fond - utilise le dégradé global du body */}
@@ -75,14 +82,18 @@ const HowItWorksSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-block p-6 glass-card">
-            <p className="font-rubik text-white font-semibold text-lg mb-2">
-              Prêt à commencer ton aventure ?
-            </p>
-            <p className="font-rubik text-white/70">
-              L'IA attend tes goûts musicaux pour créer ton voyage parfait
-            </p>
-          </div>
+          <Button
+            onClick={scrollToChatbot}
+            variant="groove"
+            size="lg"
+            className="text-lg px-8 py-6 font-bold font-rubik shadow-groove hover:shadow-xl rounded-full"
+          >
+            Commencer ton aventure
+            <ArrowRight className="ml-2" />
+          </Button>
+          <p className="font-rubik text-white/70 mt-4 text-sm">
+            L'IA attend tes goûts musicaux pour créer ton voyage parfait
+          </p>
         </div>
       </div>
     </section>
