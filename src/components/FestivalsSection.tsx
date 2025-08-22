@@ -35,7 +35,7 @@ const festivals = [
     dates: "12–21 avril 2024",
     location: "Indio, Californie, USA",
     price: 450,
-    image: "/lovable-uploads/54b4fb0f-fad5-4063-bedf-97624ee4afa6.png"
+    image: "/lovable-uploads/364183a8-4f42-4900-83d9-8f98ec026919.png"
   },
   {
     name: "Ultra Music Festival", 
