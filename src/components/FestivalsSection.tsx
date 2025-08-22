@@ -28,7 +28,7 @@ const festivals = [
     dates: "29 mai – 2 juin 2024",
     location: "Barcelone, Espagne", 
     price: 120,
-    image: "/lovable-uploads/35cd1451-7641-43c7-9583-b35707b9f2ac.png"
+    image: "/lovable-uploads/4a771949-e4d6-4aba-bf82-ac450e3aab75.png"
   },
   {
     name: "Coachella",
