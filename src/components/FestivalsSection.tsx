@@ -49,7 +49,7 @@ const festivals = [
     dates: "10–14 juillet 2024",
     location: "Novi Sad, Serbie",
     price: 70,
-    image: "/lovable-uploads/64b343b3-72b3-421f-a42f-56780c3ed1c2.png"
+    image: "/lovable-uploads/6f9e89f1-1145-489a-87fc-71471f2e6f9e.png"
   },
   {
     name: "Dekmantel Festival",
