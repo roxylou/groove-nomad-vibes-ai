@@ -85,11 +85,11 @@ const HeroSectionEn = () => {
             className="text-center mb-16 relative z-10 transition-opacity duration-500"
             style={{ opacity: contentOpacity }}
           >
-            <h1 className="section-title text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
               BUILD YOUR FESTIVAL<br />
               TRIP WITH AI.
             </h1>
-            <p className="section-subtitle text-white/90 max-w-2xl mx-auto mb-5">
+            <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto mb-5">
               Personalized, instant quotes, seamless booking.
             </p>
           </div>
