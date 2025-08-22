@@ -56,7 +56,7 @@ const festivals = [
     dates: "31 juillet – 4 août 2024", 
     location: "Amsterdam, Pays-Bas",
     price: 95,
-    image: "/lovable-uploads/dabf1291-1584-48d6-a2cb-027ab6d48e3a.png"
+    image: "/lovable-uploads/92a5bbff-8aca-4a1d-9c78-0423c2289668.png"
   },
   {
     name: "Burning Man",
