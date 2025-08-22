@@ -63,7 +63,7 @@ const festivals = [
     dates: "25 août – 2 septembre 2024",
     location: "Black Rock Desert, Nevada, USA", 
     price: 425,
-    image: "/lovable-uploads/ec20c808-cfdb-4a19-9379-e8cb77a44449.png"
+    image: "/lovable-uploads/4039d3c1-ae30-4f4e-80c9-4653aa46e33d.png"
   },
   {
     name: "DGTL Amsterdam",
