@@ -70,7 +70,7 @@ const festivals = [
     dates: "29–31 mars 2024",
     location: "Amsterdam, Pays-Bas",
     price: 75,
-    image: "/lovable-uploads/f40d29b3-88f0-4531-b5e3-fce050b053e3.png"
+    image: "/lovable-uploads/8251015b-3617-4948-9aa8-e4fffff7b4dd.png"
   },
   {
     name: "Movement Detroit", 
