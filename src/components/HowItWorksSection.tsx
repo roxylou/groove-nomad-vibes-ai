@@ -35,10 +35,10 @@ const HowItWorksSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-wide">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
             COMMENT ÇA MARCHE ?
           </h2>
-          <p className="font-rubik text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto">
             Trois étapes simples pour créer le voyage festival de tes rêves
           </p>
         </div>

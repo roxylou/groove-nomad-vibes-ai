@@ -20,10 +20,10 @@ const ChatbotSection = () => {
               <Sparkles className="w-6 h-6 text-groove-violet" />
             </div>
             
-            <h2 className="font-rubik text-3xl md:text-5xl font-extrabold text-white mb-6 tracking-wide">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
               PARLE À NOTRE IA !
             </h2>
-            <p className="font-rubik text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto leading-relaxed">
               Notre assistant IA comprend tes goûts musicaux et crée ton voyage festival parfait en temps réel
             </p>
           </div>
