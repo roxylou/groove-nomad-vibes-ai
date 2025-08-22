@@ -77,7 +77,7 @@ const festivals = [
     dates: "25–27 mai 2024",
     location: "Détroit, USA",
     price: 95,
-    image: "/lovable-uploads/f92515f7-4e6a-46c9-889c-43b603774007.png"
+    image: "/lovable-uploads/1f7546db-e06a-4385-9bbd-465084380c15.png"
   }
 ];
 
