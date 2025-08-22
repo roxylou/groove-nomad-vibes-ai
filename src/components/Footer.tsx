@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Twitter, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Footer = () => {
   return (
@@ -93,7 +94,9 @@ const Footer = () => {
             </div>
 
             {/* Legal Links */}
-            <div className="flex gap-6 font-rubik text-sm text-white/80">
+            <div className="flex gap-6 font-rubik text-sm text-white/80 items-center">
+              <LanguageSwitcher />
+              <span className="text-white/50">|</span>
               <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
               <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
               <a href="#" className="hover:text-white transition-colors">CGU</a>
