@@ -42,7 +42,7 @@ const festivals = [
     dates: "22–24 mars 2024",
     location: "Miami, USA",
     price: 299,
-    image: "/lovable-uploads/5cac453b-5167-428e-9ece-1d783717e179.png"
+    image: "/lovable-uploads/13542835-590e-4fb0-a291-47d334e4471d.png"
   },
   {
     name: "Exit Festival",
