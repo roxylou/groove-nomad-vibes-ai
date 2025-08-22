@@ -65,41 +65,41 @@ const HeroSection = () => {
       </section>
 
       {/* Section du contenu principal */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Pas de fond - utilise le dégradé global du body */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4">
+          {/* Blurred Circular Shapes */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-[#d63384]/60 via-[#e91e63]/40 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-[#d63384]/60 via-[#e91e63]/40 to-transparent rounded-full blur-3xl"></div>
+          </div>
 
-        {/* Blurred Circular Shapes - continuation */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-radial from-[#d63384]/60 via-[#e91e63]/40 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-radial from-[#d63384]/60 via-[#e91e63]/40 to-transparent rounded-full blur-3xl"></div>
-        </div>
+          {/* Floating Shapes */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-groove-pink/30 to-groove-violet/30 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-br from-groove-light-pink/40 to-groove-pink/40 rounded-full blur-lg animate-bounce"></div>
+            <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-groove-violet/20 rounded-full blur-md animate-pulse delay-1000"></div>
+          </div>
 
-        {/* Floating Shapes - continuation */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-groove-pink/30 to-groove-violet/30 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-32 right-16 w-24 h-24 bg-gradient-to-br from-groove-light-pink/40 to-groove-pink/40 rounded-full blur-lg animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-groove-violet/20 rounded-full blur-md animate-pulse delay-1000"></div>
-        </div>
-
-        {/* Contenu principal */}
-        <div 
-          className="relative z-10 text-center max-w-4xl mx-auto px-6 transition-opacity duration-500"
-          style={{ opacity: contentOpacity }}
-        >
-          {/* Texte principal */}
-          <div className="mb-12">
+          {/* Header */}
+          <div 
+            className="text-center mb-16 relative z-10 transition-opacity duration-500"
+            style={{ opacity: contentOpacity }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-groove tracking-wide">
               CRÉE TON VOYAGE<br />
               AUTOUR D'UN FESTIVAL<br />
               AVEC L'IA.
             </h1>
-            <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto mb-5">
               Personnalisé, devis instantané, réservation fluide.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div 
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-7 relative z-10 transition-opacity duration-500"
+            style={{ opacity: contentOpacity }}
+          >
             <Button 
               variant="groove" 
               size="lg" 
@@ -132,7 +132,10 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+          <div 
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto relative z-10 transition-opacity duration-500"
+            style={{ opacity: contentOpacity }}
+          >
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white font-rubik">500+</div>
               <div className="text-white/80 font-rubik">Festivals partenaires</div>
