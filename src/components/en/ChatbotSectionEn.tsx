@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Bot, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { Bot, Sparkles } from "lucide-react";
 
 const ChatbotSectionEn = () => {
-  const [showChat, setShowChat] = useState(false);
 
   return (
     <section id="chatbot-section-en" className="py-20 relative overflow-hidden">
@@ -26,78 +24,44 @@ const ChatbotSectionEn = () => {
             <p className="text-lg md:text-xl text-white/90 font-rubik font-medium max-w-2xl mx-auto leading-relaxed">
               Share your music taste and let the AI build the perfect trip in real time
             </p>
+            <p className="text-sm text-white/70 font-rubik mt-2 italic">
+              Prototype: the assistant currently speaks French 🇫🇷
+            </p>
           </div>
 
-          {/* Chatbot Preview/Placeholder */}
+          {/* Typebot Chatbot */}
           <div className="mb-8">
-            {!showChat ? (
-              // Preview State
-              <div className="glass-card p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
-                <div className="space-y-6">
-                  {/* Mock conversation */}
-                  <div className="text-left space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center flex-shrink-0">
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
-                      <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4 max-w-xs">
-                        <p className="font-rubik text-white text-sm">
-                          Hello! What type of music makes you move? 🎵
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 justify-end">
-                      <div className="bg-gradient-to-r from-groove-pink to-groove-violet rounded-2xl rounded-tr-sm p-4 max-w-xs">
-                        <p className="font-rubik text-white text-sm">
-                          I love electro and techno! 
-                        </p>
-                      </div>
-                      <div className="w-8 h-8 bg-groove-blue rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold font-rubik text-xs">U</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center flex-shrink-0">
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
-                      <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4 max-w-xs">
-                        <p className="font-rubik text-white text-sm">
-                          Perfect! I'm thinking Tomorrowland or Ultra... What budget? 💰
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Typing indicator */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4">
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-groove-pink rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-groove-violet rounded-full animate-bounce delay-100"></div>
-                        <div className="w-2 h-2 bg-groove-blue rounded-full animate-bounce delay-200"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              // Chatbot IA intégré
-              <div className="glass-card p-4 shadow-2xl max-w-2xl mx-auto h-96">
+            <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden">
+              <div 
+                className="chat-embed relative w-full overflow-hidden"
+                style={{
+                  height: '680px',
+                  borderRadius: '26px'
+                }}
+              >
                 <iframe
-                  src="https://backtofest-v2.onrender.com"
-                  className="w-full h-full rounded-2xl border-0"
-                  title="GrooveNomad AI Chatbot"
-                  allow="microphone; camera; clipboard-read; clipboard-write"
+                  src="https://typebot.co/groove-nomad-assistant-a3rk34f"
+                  title="GrooveNomad AI Assistant"
+                  allow="camera; microphone; autoplay; clipboard-read; clipboard-write; encrypted-media"
                   loading="lazy"
+                  className="absolute inset-0 w-full h-full border-0"
+                  style={{borderRadius: 'inherit'}}
                 />
               </div>
-            )}
+            </div>
           </div>
+
+          {/* Add responsive height via style tag */}
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              @media (max-width: 768px) {
+                .chat-embed {
+                  height: 72vh !important;
+                  border-radius: 20px !important;
+                }
+              }
+            `
+          }} />
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -105,10 +69,9 @@ const ChatbotSectionEn = () => {
               variant="groove" 
               size="lg" 
               className="text-lg px-8 py-4 font-rubik"
-              onClick={() => setShowChat(!showChat)}
             >
-              <MessageCircle className="mr-2" />
-              {showChat ? "See preview" : "Start chatting"}
+              <Bot className="mr-2" />
+              Start chatting
             </Button>
             <Button 
               variant="groove-outline" 
@@ -154,15 +117,6 @@ const ChatbotSectionEn = () => {
               </div>
               <h4 className="font-rubik font-semibold text-white mb-2">Exclusive tips</h4>
               <p className="font-rubik text-white/70 text-sm">Hidden tips and deals</p>
-            </div>
-          </div>
-
-          {/* Prototype notice */}
-          <div className="mt-8">
-            <div className="inline-block p-4 glass-card">
-              <p className="text-white/90 font-rubik text-sm">
-                <span className="font-bold text-groove-light-pink">Prototype:</span> the assistant currently speaks French 🇫🇷
-              </p>
             </div>
           </div>
         </div>

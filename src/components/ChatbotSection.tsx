@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Bot, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { Bot, Sparkles } from "lucide-react";
 
 const ChatbotSection = () => {
-  const [showChat, setShowChat] = useState(false);
 
   return (
     <section id="chatbot-section" className="py-20 relative overflow-hidden">
@@ -28,76 +26,39 @@ const ChatbotSection = () => {
             </p>
           </div>
 
-          {/* Chatbot Preview/Placeholder */}
+          {/* Typebot Chatbot */}
           <div className="mb-8">
-            {!showChat ? (
-              // Preview State
-              <div className="glass-card p-8 md:p-12 shadow-2xl max-w-2xl mx-auto">
-                <div className="space-y-6">
-                  {/* Mock conversation */}
-                  <div className="text-left space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center flex-shrink-0">
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
-                      <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4 max-w-xs">
-                        <p className="font-rubik text-white text-sm">
-                          Salut ! Quel genre de musique te fait vibrer ? 🎵
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3 justify-end">
-                      <div className="bg-gradient-to-r from-groove-pink to-groove-violet rounded-2xl rounded-tr-sm p-4 max-w-xs">
-                        <p className="font-rubik text-white text-sm">
-                          J'adore l'electro et la techno ! 
-                        </p>
-                      </div>
-                      <div className="w-8 h-8 bg-groove-blue rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold font-rubik text-xs">U</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center flex-shrink-0">
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
-                      <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4 max-w-xs">
-                        <p className="font-rubik text-white text-sm">
-                          Parfait ! Je pense à Tomorrowland ou Ultra... Quel budget ? 💰
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Typing indicator */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-groove-pink to-groove-violet rounded-full flex items-center justify-center">
-                      <Bot className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="bg-groove-light-pink/30 rounded-2xl rounded-tl-sm p-4">
-                      <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-groove-pink rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-groove-violet rounded-full animate-bounce delay-100"></div>
-                        <div className="w-2 h-2 bg-groove-blue rounded-full animate-bounce delay-200"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              // Chatbot IA intégré
-              <div className="glass-card p-4 shadow-2xl max-w-2xl mx-auto h-96">
+            <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden">
+              <div 
+                className="chat-embed relative w-full overflow-hidden"
+                style={{
+                  height: '680px',
+                  borderRadius: '26px'
+                }}
+              >
                 <iframe
-                  src="https://backtofest-v2.onrender.com"
-                  className="w-full h-full rounded-2xl border-0"
-                  title="Chatbot IA GrooveNomad"
-                  allow="microphone; camera; clipboard-read; clipboard-write"
+                  src="https://typebot.co/groove-nomad-assistant-a3rk34f"
+                  title="Assistant GrooveNomad"
+                  allow="camera; microphone; autoplay; clipboard-read; clipboard-write; encrypted-media"
                   loading="lazy"
+                  className="absolute inset-0 w-full h-full border-0"
+                  style={{borderRadius: 'inherit'}}
                 />
               </div>
-            )}
+            </div>
           </div>
+
+          {/* Add responsive height via style tag */}
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              @media (max-width: 768px) {
+                .chat-embed {
+                  height: 72vh !important;
+                  border-radius: 20px !important;
+                }
+              }
+            `
+          }} />
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -105,10 +66,9 @@ const ChatbotSection = () => {
               variant="groove" 
               size="lg" 
               className="text-lg px-8 py-4 font-rubik"
-              onClick={() => setShowChat(!showChat)}
             >
-              <MessageCircle className="mr-2" />
-              {showChat ? "Voir l'aperçu" : "Commencer à chatter"}
+              <Bot className="mr-2" />
+              Commencer à chatter
             </Button>
             <Button 
               variant="groove-outline" 
