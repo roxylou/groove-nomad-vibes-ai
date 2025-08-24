@@ -31,7 +31,7 @@ const ChatbotSectionEn = () => {
 
           {/* Typebot Chatbot */}
           <div className="mb-8">
-            <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden">
+            <div className="shadow-2xl max-w-2xl mx-auto overflow-hidden" style={{background: 'transparent'}}>
               <div 
                 className="chat-embed relative w-full overflow-hidden"
                 style={{
