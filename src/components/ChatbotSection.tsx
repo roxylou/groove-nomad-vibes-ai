@@ -28,8 +28,8 @@ const ChatbotSection = () => {
 
           {/* Typebot Chatbot */}
           <div className="mb-8">
-            <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden">
-               <div className="chat-embed" style={{position:'relative',width:'100%',height:'680px',borderRadius:'26px',overflow:'hidden'}}>
+            <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden" style={{background:'transparent',backgroundColor:'transparent'}}>
+              <div className="chat-embed" style={{position:'relative',width:'100%',height:'680px',borderRadius:'inherit',overflow:'hidden',background:'transparent',padding:'0'}}>
                 <iframe
                   src="https://typebot.co/groove-nomad-assistant-a3rk34f"
                   title="Assistant GrooveNomad"
@@ -44,24 +44,50 @@ const ChatbotSection = () => {
           {/* CSS global pour neutraliser tous les fonds blancs */}
           <style dangerouslySetInnerHTML={{
             __html: `
-              /* 1) Rendre le wrapper et tout son contenu TRANSPARENT */
-              .chat-embed, .chat-embed * { background: transparent !important; }
-
-              /* 2) Tuer les fonds blancs Lovable fréquents (classes & inline styles) */
-              .bg-white, .background-white, .card-white,
+              /* 1) Neutraliser TOUS les fonds blancs dans la zone du chatbot */
+              #chatbot-section .glass-card,
+              #chatbot-section .glass-card *,
+              .chat-embed, .chat-embed *,
+              .bg-white, .background-white, .card-white, .bg-card,
               [class*="Section"][class*="white"],
               [class*="Container"][class*="white"],
+              [class*="card"][class*="bg"],
               [style*="background: #fff"], [style*="background:#fff"],
-              [style*="background-color: #fff"], [style*="background-color: rgb(255"] {
+              [style*="background-color: #fff"], [style*="background-color:#fff"],
+              [style*="background-color: rgb(255"], [style*="background-color:rgb(255"] {
                 background: transparent !important;
+                background-color: transparent !important;
               }
 
-              /* 3) L'iframe ne doit jamais recréer un fond et hérite de l'arrondi */
-              .chat-embed iframe { background: transparent !important; border:0; border-radius:inherit; display:block; }
+              /* 2) La glass-card garde son liseré mais fond transparent */
+              #chatbot-section .glass-card {
+                background: transparent !important;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              }
+
+              /* 3) L'embed et iframe remplissent 100% sans fond */
+              .chat-embed {
+                background: transparent !important;
+                padding: 0 !important;
+                margin: 0 !important;
+              }
+
+              .chat-embed iframe { 
+                background: transparent !important; 
+                border: 0; 
+                border-radius: inherit; 
+                display: block;
+                width: 100% !important;
+                height: 100% !important;
+              }
 
               /* 4) Mobile : hauteur fluide */
               @media (max-width: 768px){
-                .chat-embed{ height:72vh; border-radius:20px; }
+                .chat-embed { 
+                  height: 75vh !important; 
+                  border-radius: inherit !important; 
+                }
               }
             `
           }} />
