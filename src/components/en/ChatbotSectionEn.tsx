@@ -51,9 +51,23 @@ const ChatbotSectionEn = () => {
             </div>
           </div>
 
-          {/* Add responsive height via style tag */}
+          {/* Add responsive height and transparency CSS */}
           <style dangerouslySetInnerHTML={{
             __html: `
+              /* Le wrapper de la carte doit être transparent à l'intérieur */
+              .chat-embed, .chat-embed * {
+                background: transparent !important;
+              }
+              /* L'iframe remplit la carte sans bord ni fond */
+              .chat-embed iframe {
+                display: block; 
+                width: 100%; 
+                height: 100%;
+                border: 0; 
+                border-radius: inherit; 
+                background: transparent;
+              }
+              
               @media (max-width: 768px) {
                 .chat-embed {
                   height: 72vh !important;
