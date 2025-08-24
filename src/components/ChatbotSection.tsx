@@ -29,47 +29,39 @@ const ChatbotSection = () => {
           {/* Typebot Chatbot */}
           <div className="mb-8">
             <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden">
-              <div 
-                className="chat-embed relative w-full overflow-hidden"
-                style={{
-                  height: '680px',
-                  borderRadius: '26px'
-                }}
-              >
+               <div className="chat-embed" style={{position:'relative',width:'100%',height:'680px',borderRadius:'26px',overflow:'hidden'}}>
                 <iframe
                   src="https://typebot.co/groove-nomad-assistant-a3rk34f"
                   title="Assistant GrooveNomad"
                   allow="camera; microphone; autoplay; clipboard-read; clipboard-write; encrypted-media"
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full border-0"
-                  style={{borderRadius: 'inherit'}}
+                  style={{position:'absolute',inset:'0',width:'100%',height:'100%',border:'0',borderRadius:'inherit',background:'transparent'}}
                 />
               </div>
             </div>
           </div>
 
-          {/* Add responsive height and transparency CSS */}
+          {/* CSS global pour neutraliser tous les fonds blancs */}
           <style dangerouslySetInnerHTML={{
             __html: `
-              /* Le wrapper de la carte doit être transparent à l'intérieur */
-              .chat-embed, .chat-embed * {
+              /* 1) Rendre le wrapper et tout son contenu TRANSPARENT */
+              .chat-embed, .chat-embed * { background: transparent !important; }
+
+              /* 2) Tuer les fonds blancs Lovable fréquents (classes & inline styles) */
+              .bg-white, .background-white, .card-white,
+              [class*="Section"][class*="white"],
+              [class*="Container"][class*="white"],
+              [style*="background: #fff"], [style*="background:#fff"],
+              [style*="background-color: #fff"], [style*="background-color: rgb(255"] {
                 background: transparent !important;
               }
-              /* L'iframe remplit la carte sans bord ni fond */
-              .chat-embed iframe {
-                display: block; 
-                width: 100%; 
-                height: 100%;
-                border: 0; 
-                border-radius: inherit; 
-                background: transparent;
-              }
-              
-              @media (max-width: 768px) {
-                .chat-embed {
-                  height: 72vh !important;
-                  border-radius: 20px !important;
-                }
+
+              /* 3) L'iframe ne doit jamais recréer un fond et hérite de l'arrondi */
+              .chat-embed iframe { background: transparent !important; border:0; border-radius:inherit; display:block; }
+
+              /* 4) Mobile : hauteur fluide */
+              @media (max-width: 768px){
+                .chat-embed{ height:72vh; border-radius:20px; }
               }
             `
           }} />
