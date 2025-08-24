@@ -6,7 +6,7 @@ const ChatbotSection = () => {
   return (
     <section id="chatbot-section" className="py-20 relative overflow-hidden">
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10" style={{background:'transparent',backgroundColor:'transparent'}}>
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <div className="mb-12">
@@ -47,14 +47,14 @@ const ChatbotSection = () => {
               /* 1) Neutraliser TOUS les fonds blancs dans la zone du chatbot */
               #chatbot-section .glass-card,
               #chatbot-section .glass-card *,
-              .chat-embed, .chat-embed *,
-              .bg-white, .background-white, .card-white, .bg-card,
-              [class*="Section"][class*="white"],
-              [class*="Container"][class*="white"],
-              [class*="card"][class*="bg"],
-              [style*="background: #fff"], [style*="background:#fff"],
-              [style*="background-color: #fff"], [style*="background-color:#fff"],
-              [style*="background-color: rgb(255"], [style*="background-color:rgb(255"] {
+              #chatbot-section .chat-embed, #chatbot-section .chat-embed *,
+              #chatbot-section .bg-white, #chatbot-section .background-white, #chatbot-section .card-white, #chatbot-section .bg-card,
+              #chatbot-section [class*="Section"][class*="white"],
+              #chatbot-section [class*="Container"][class*="white"],
+              #chatbot-section [class*="card"][class*="bg"],
+              #chatbot-section [style*="background: #fff"], #chatbot-section [style*="background:#fff"],
+              #chatbot-section [style*="background-color: #fff"], #chatbot-section [style*="background-color:#fff"],
+              #chatbot-section [style*="background-color: rgb(255"], #chatbot-section [style*="background-color:rgb(255"] {
                 background: transparent !important;
                 background-color: transparent !important;
               }

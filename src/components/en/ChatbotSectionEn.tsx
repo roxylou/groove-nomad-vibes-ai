@@ -6,7 +6,7 @@ const ChatbotSectionEn = () => {
   return (
     <section id="chatbot-section-en" className="py-20 relative overflow-hidden">
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10" style={{background:'transparent',backgroundColor:'transparent'}}>
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <div className="mb-12">
@@ -50,14 +50,14 @@ const ChatbotSectionEn = () => {
               /* 1) Neutraliser TOUS les fonds blancs dans la zone du chatbot */
               #chatbot-section-en .glass-card,
               #chatbot-section-en .glass-card *,
-              .chat-embed, .chat-embed *,
-              .bg-white, .background-white, .card-white, .bg-card,
-              [class*="Section"][class*="white"],
-              [class*="Container"][class*="white"],
-              [class*="card"][class*="bg"],
-              [style*="background: #fff"], [style*="background:#fff"],
-              [style*="background-color: #fff"], [style*="background-color:#fff"],
-              [style*="background-color: rgb(255"], [style*="background-color:rgb(255"] {
+              #chatbot-section-en .chat-embed, #chatbot-section-en .chat-embed *,
+              #chatbot-section-en .bg-white, #chatbot-section-en .background-white, #chatbot-section-en .card-white, #chatbot-section-en .bg-card,
+              #chatbot-section-en [class*="Section"][class*="white"],
+              #chatbot-section-en [class*="Container"][class*="white"],
+              #chatbot-section-en [class*="card"][class*="bg"],
+              #chatbot-section-en [style*="background: #fff"], #chatbot-section-en [style*="background:#fff"],
+              #chatbot-section-en [style*="background-color: #fff"], #chatbot-section-en [style*="background-color:#fff"],
+              #chatbot-section-en [style*="background-color: rgb(255"], #chatbot-section-en [style*="background-color:rgb(255"] {
                 background: transparent !important;
                 background-color: transparent !important;
               }
