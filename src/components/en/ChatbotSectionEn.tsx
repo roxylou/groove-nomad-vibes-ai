@@ -34,7 +34,7 @@ const ChatbotSectionEn = () => {
             <div className="glass-card shadow-2xl max-w-2xl mx-auto overflow-hidden" style={{background:'transparent',backgroundColor:'transparent'}}>
               <div className="chat-embed" style={{position:'relative',width:'100%',height:'680px',borderRadius:'inherit',overflow:'hidden',background:'transparent',padding:'0'}}>
                 <iframe
-                  src="https://typebot.co/groove-nomad-assistant-a3rk34f"
+                  src="https://typebot.co/embed/groove-nomad-assistant-a3rk34f?theme=dark&bg=transparent"
                   title="GrooveNomad AI Assistant"
                   allow="camera; microphone; autoplay; clipboard-read; clipboard-write; encrypted-media"
                   loading="lazy"
